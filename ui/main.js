@@ -5,6 +5,11 @@ element.innerHTML = 'New value';
 
 //move the image
 var image = document.getElementById('vishal');
+var marginLeft = 0;
+function moveRight(){
+    marginLeft = marginLeft + 10;
+    vishal.style.marginLeft = marginLeft + 'px';//concatenating 10 with px
+}
 vishal.onclick = function(){
-    vishal.style.marginLeft = '100px';
+    var interval = setInterval(moveRight,100);
 };
