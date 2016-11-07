@@ -7,7 +7,7 @@ element.innerHTML = 'New value';
 var img = document.getElementById('vishal');
 var marginLeft = 0;
 function moveRight(){
-    marginLeft = marginLeft + 10;
+    marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';//concatenating 10 with px
 }
 img.onclick = function(){
