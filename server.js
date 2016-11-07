@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-    articleOne: {
+    'article-one': {
         title: 'Article One | Vishal Patro',
         heading: 'Article One',
         date: 'Nov 7, 2016',
@@ -21,7 +21,7 @@ var articles = {
                 This is the content for my first article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
             </p>`
     },
-    articleTwo: {
+    'article-two': {
         title: 'Article Two | Vishal Patro',
         heading: 'Article Two',
         date: 'Nov 8, 2016',
@@ -36,7 +36,7 @@ var articles = {
                 This is the content for my second article. This is the content for my second article. This is the content for my second article.This is the content for my second article. This is the content for my second article. This is the content for my second article.
             </p>`
     },
-    articleThree: {
+    'article-three': {
         title: 'Article Three | Vishal Patro',
         heading: 'Article Three',
         date: 'Nov 10, 2016',
@@ -94,16 +94,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req, res) {
-   res.send(createTemplate(articleOne)); 
-});
-
-app.get('/article-two', function(req, res) {
-   res.send(createTemplate(articleTwo)); 
-});
-
-app.get('/article-three', function(req, res) {
-   res.send(createTemplate(articleThree)); 
+app.get('/:articleName', function(req, res) {
+    //articleName = article-one
+    //articles[articleName] = {} content for article one
+    var articleName = req.params.articleName;
+    //this abv statement is use to extract the article name  and use into the index of the articles object whch is used to create template
+    res.send(createTemplate(articles[articleName])); 
 });
 
 app.get('/ui/style.css', function (req, res) {
