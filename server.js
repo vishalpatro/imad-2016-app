@@ -150,7 +150,7 @@ app.get('/submit-name/:name', function (req, res) {
    //how to convert this object to string,here comes JSON
    //JSON: javascript obj notation : to convert java string objects into string
    //here using json we conv array of names into string
-   res.send(JSON.stringify(names));
+   res.send(JSON.stringify(names));//obj to string conv
 });
 */
 
