@@ -101,6 +101,22 @@ app.get('/counter', function (req, res) {
 });
 //we can only send a string as a response
 
+
+
+//query parameter
+//extract of inf after ?
+//URL: /submit-name?name=xxxx
+
+var names = [];
+app.get('/submit-name', function (req, res) {
+    //get the name from the req
+   var name = req.query.name;
+   names.push(name);
+   res.send(JSON.stringify(names));
+});
+
+
+
 app.get('/:articleName', function(req, res) {
     //articleName = article-one
     //articles[articleName] = {} content for article one
@@ -121,6 +137,8 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+
+
 /*
 //getting an information as a part of URL and then sending that inf back as json
 var names = [];
@@ -136,17 +154,7 @@ app.get('/submit-name/:name', function (req, res) {
 });
 */
 
-//query parameter
-//extract of inf after ?
-//URL: /submit-name?name=xxxx
 
-var names = [];
-app.get('/submit-name', function (req, res) {
-    //get the name from the req
-   var name = req.query.name;
-   names.push(name);
-   res.send(JSON.stringify(names));
-});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
