@@ -121,6 +121,17 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+var names = [];
+app.get('/submit-name/:name', function (req, res) {
+    //get the name from the req
+   var name = req.params.name; //TODO
+   
+   names.push(name);//to extract name and concatenate
+   //how to convert this object to string,here comes JSON
+   //JSON: javascript obj notation : to convert java string objects into string
+   //here using json we conv array of names into string
+   res.send(JSON.stringify(names));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
