@@ -38,7 +38,6 @@ body {
     font-family: sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-    border: 15px solid coral;
-    -webkit-animation: mymove 5s infinite;
-    animation: mymove 5s infinite;
+    border: 10px solid coral;
+    background: white;
 }
