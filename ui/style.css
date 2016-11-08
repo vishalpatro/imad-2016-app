@@ -1,8 +1,8 @@
 body {
     font-family: sans-serif;
     background: #F6F4F1;
-    -webkit-animation: mymove 10s infinite;
-    animation: mymove 10s infinite;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
 }
 
 @-webkit-keyframes mymove {
@@ -38,6 +38,6 @@ body {
     font-family: sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-    border: 10px solid coral;
+    border: 10px #B1D983;
     background-color: white;
 }
