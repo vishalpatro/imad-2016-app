@@ -121,6 +121,8 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+/*
+//getting an information as a part of URL and then sending that inf back as json
 var names = [];
 app.get('/submit-name/:name', function (req, res) {
     //get the name from the req
@@ -130,6 +132,19 @@ app.get('/submit-name/:name', function (req, res) {
    //how to convert this object to string,here comes JSON
    //JSON: javascript obj notation : to convert java string objects into string
    //here using json we conv array of names into string
+   res.send(JSON.stringify(names));
+});
+*/
+
+//query parameter
+//extract of inf after ?
+//URL: /submit-name?name=xxxx
+
+var names = [];
+app.get('/submit-name', function (req, res) {
+    //get the name from the req
+   var name = req.query.name;
+   names.push(name);
    res.send(JSON.stringify(names));
 });
 
