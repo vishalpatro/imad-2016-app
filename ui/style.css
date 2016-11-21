@@ -35,6 +35,8 @@ ul.topnav li.right {float: right;}
 
 .center {
     text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .text-big {
@@ -55,3 +57,5 @@ ul.topnav li.right {float: right;}
     font-family: sans-serif;
     background-color: white;
 }
+
+ul { display:table; margin:0 auto;}
