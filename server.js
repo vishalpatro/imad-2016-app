@@ -156,6 +156,27 @@ app.get('/:articleName', function(req, res) {
     res.send(createTemplate(articles[articleName])); 
 });
 
+app.get('/articles/:articleName', function(req, res) {
+    //articleName = article-one
+    //articles[articleName] = {} content for article one
+    //var articleName = req.params.articleName;
+    //this abv statement is use to extract the article name  and use into the index of the articles object whch is used to create template
+    
+    pool.query("select * from article where title=" + req.params.articleName, function(err, result) {
+        if (err) {
+            res.status(500).send(err.toString());
+        }else {
+            if(result.rows.length === 0) {
+                res.status(404).send('Article not found');
+            }
+            else {
+                var articleData = result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+        }
+    });
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
