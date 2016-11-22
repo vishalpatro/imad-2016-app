@@ -33,7 +33,14 @@ function createTemplate(data){
         <body>
             <div class="container">
                 <div>
-                    <a href="/">HOME</a>
+                    <ul class="topnav">
+                      <li><a class="active" href="/">Home</a></li>
+                      <li><a href="#news">News</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                      <li class="right"><a href="/about">About</a></li>
+                    </ul>
+                    <br/>
+                    <br/>
                 </div>
                 <h3>
                     ${heading}
