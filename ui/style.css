@@ -58,29 +58,3 @@ ul.topnav li.right {float: right;}
     background-color: white;
 }
 .academics{ display:table; margin:0 auto;}
-.w3-content {
-    max-width: 1500px;
-    margin: auto;
-}
-
-.w3-section {
-    margin-top: 16px !important;
-    margin-bottom: 0px !important;
-}
-\element.style {
-}
-.w3-black, .w3-hover-black:hover {
-    color: #fff !important;
-    background-color: #0000 !important;
-}
-
-.w3-display-middle {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}
-.w3-large {
-    font-size: 18px !important;
-}
