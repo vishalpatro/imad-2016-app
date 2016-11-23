@@ -61,7 +61,7 @@ ul.topnav li.right {float: right;}
 
 .image { 
    position: relative; 
-   width: 500px; 
+   background-size:cover; 
 }
 
 h2 { 
