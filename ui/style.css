@@ -57,7 +57,7 @@ ul.topnav li.right {float: right;}
     font-family: sans-serif;
     background-color: white;
 }
-ul { display:table; margin:0 auto;}
+ul.academics{ display:table; margin:0 auto;}
 
 
 h4 {text-align:center;}
