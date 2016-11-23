@@ -59,20 +59,3 @@ ul.topnav li.right {float: right;}
 }
 .academics{ display:table; margin:0 auto;}
 
-.background {
-  background: url(https://pbs.twimg.com/media/Cx0niX4XEAAi5G_.jpg) repeat;
-  border: 2px solid black;
-}
-transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
-}
-
-transbox p {
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
-}
