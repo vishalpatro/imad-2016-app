@@ -59,6 +59,14 @@ ul.topnav li.right {float: right;}
 }
 .academics{ display:table; margin:0 auto;}
 
-h2{
-    align: center
+.background {
+  background: url(https://www.google.co.in/imgres?imgurl=http%3A%2F%2Fwallpaperswide.com%2Fdownload%2Fdiffuse-wallpaper-2048x1152.jpg&imgrefurl=http%3A%2F%2Fwallpaperswide.com%2Fdiffuse-wallpapers.html&docid=xBuT1Is9Y5a-ZM&tbnid=GvYDJ8c0iwNU5M%3A&vet=1&w=2048&h=1152&bih=672&biw=1366&ved=0ahUKEwjHsbXq5L7QAhXJtY8KHS32DysQMwgcKAAwAA&iact=mrc&uact=8) repeat;
+  border: 2px solid black;
+}
+
+
+transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
 }
