@@ -9,6 +9,7 @@ var session = require('express-session');
 var config = {
   host: 'db.imad.hasura-app.io',
   user: 'vishalpatro',
+  port: '5432',
   password: process.env.DB_PASSWORD,
   database: 'vishalpatro'
   //we dont wan to show password so DB_PASSWORD IS A ENV VAR and to access that we use process.env
@@ -18,6 +19,11 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret: 'someRandomSecretValue',
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+}));
+
 
 function createTemplate(data){
     var title = data.title;
@@ -97,6 +103,25 @@ app.post('/create-user', function (req, res) {
    });
 });
 
+
+app.post('/create-article', function (req, res) {
+if (req.session && req.session.auth && req.session.auth.userId) {
+var title = req.body.title;
+var heading = req.body.heading;
+var content = req.body.content;
+pool.query('INSERT INTO "article" (title, heading, content) VALUES ($1, $2, $3)', [title, heading, content], function (err, result) {
+if (err) {
+res.status(500).send(err.toString());
+} else {
+res.send('Article successfully created: '+ heading);
+}
+});
+}else{
+res.status(403).send('Register/Login to create new Article');
+}
+});
+
+
 app.post('/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
@@ -147,7 +172,8 @@ app.get('/check-login', function (req, res) {
 
 app.get('/logout', function (req, res) {
    delete req.session.auth;
-   res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
+   //res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
+   res.redirect('back');
 });
 
 
