@@ -80,6 +80,8 @@ function loadLoginForm () {
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
         `;
+var logreg=document.getElementById('login/register');
+logreg.onclick=function(){
     document.getElementById('login_area').innerHTML = loginHtml;
     
     // Submit username/password to login
@@ -155,6 +157,7 @@ function loadLoginForm () {
     
     };
 }
+};
 
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
