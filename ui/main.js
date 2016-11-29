@@ -73,12 +73,13 @@ submit.onclick = function(){
 
 function loadLoginForm () {
     var loginHtml = `
-        
+        <div align="center">
         <input type="text" id="username" placeholder="username" />
         <input type="password" id="password" placeholder="password" />
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
+        </div>
         `;
 var logreg=document.getElementById('login/register');
 logreg.onclick=function(){
