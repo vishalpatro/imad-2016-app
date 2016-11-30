@@ -78,3 +78,12 @@ h4 {text-align:center;}
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
 }
+
+.imadthanks {
+    background: #f0f0f0;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    max-width: 900px;
+    padding: 10px 20px;
+}
