@@ -59,8 +59,13 @@ ul.topnav li.right {float: right;}
 }
 ul.academics{ display:table; margin:0 auto;}
 
-
-h4 {text-align:center;}
+.background {
+    position: relative;
+}
+h4 {
+    text-align:center;
+    position: absolute;
+}
 
 .comment {
     margin-left: 10px;
