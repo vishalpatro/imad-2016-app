@@ -178,7 +178,9 @@ app.get('/logout', function (req, res) {
 
 
 
-
+app.get('/logreg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'logreg.html'));
+});
 
 
 app.get('/about', function (req, res) {
