@@ -45,7 +45,7 @@ function createTemplate(data){
                 <div>
                     <ul class="topnav">
                       <li><a class="active" href="/">Home</a></li>
-                      <li><a href="/logreg">Login/Register</a></li>
+                      
                       <li><a href="/contact">Contact</a></li>
                       <li class="right"><a href="/about">About</a></li>
                     </ul>
